@@ -1,0 +1,20 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "Token",
+    "name": "Swarm brain",
+    "symbol": "BRAIN",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7",
+    "fee": 3000,
+    "tickSpacing": 60,
+    "initialPrice": "125270724187523965593206900"
+  },
+  "economics": {"poolBps":8800,"initialMarketCapWei":"2500000000000000000000","remainderTo":"0x58fbbe7a3ae579961e44168944d50ea8d211c4ae"},
+  "notes": "src/Token.sol:Token takes no constructor arguments and mints all 1,000,000,000 BRAIN (18 decimals) once to msg.sender. It is a fixed-supply ERC-20 with exact transfers and no owner, administrative controls, or external mint function. No application contracts or initialization calls are required. The pool uses the specified pair token, a 0.3% fee, and tick spacing 60. initialPrice is provenance only: floor(2^96 * sqrt(initialMarketCapWei / totalSupply)), expressed as paired-currency minor units per BRAIN minor unit under a BRAIN-as-currency0 convention. The deployer derives the actual opening price from economics.initialMarketCapWei and token.totalSupply using the deployed currencies' address ordering."
+}
